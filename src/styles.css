@@ -1,4 +1,48 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  display: grid;
+  grid-template-areas:
+    'head head head'
+    'left main right';
+  grid-template-rows: 10% 1fr;
+  grid-template-columns: 15% 1fr 15%;
+  grid-gap: 10px;
+  padding: 20px;
+  height: 100vh;
+  margin: 0;
+}
+.App > #Header {
+  grid-area: head;
+  background: gold;
+}
+.App > #Side_left {
+  grid-area: left;
+  background: gold;
+}
+.App > #Side_right {
+  grid-area: right;
+  background: gold;
+}
+.App > #Main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    'nav'
+    'article'
+    'footer';
+  grid-gap: 10px;
+  grid-template-rows: 10% 1fr 10%;
+}
+.App > #Main > #Article {
+  grid-area: article;
+  background: gold;
+}
+.App > #Main > #Nav {
+  grid-area: nav;
+  background: gold;
+}
+.App > #Main > #Footer {
+  grid-area: footer;
+  background: gold;
 }
