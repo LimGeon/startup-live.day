@@ -10,6 +10,3 @@ export default function App() {
     </div>
   );
 }
-//asdfasdf
-//I changed
-//2nd change
