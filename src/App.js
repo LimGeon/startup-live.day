@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-/* import './App.css'; */
+import './App.css';
 
 function Img({ animal, type, jpg }) {
   if (type == 'All') {

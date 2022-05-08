@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    'head head head'
+    'left main right';
+  grid-template-rows: 7% 1fr;
+  grid-template-columns: 10% 1fr 10%;
+  grid-gap: 10px;
+  padding: 0px 2%;
+  height: 100vh;
+  margin: 0px;
+}
+.App > #Header {
+  grid-area: head;
+  background: #ebecf0;
+}
+.App > #Side_left {
+  grid-area: left;
+  background: #ebecf0;
+}
+.App > #Side_right {
+  grid-area: right;
+  background: #ebecf0;
+}
+.App > #Main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    'nav'
+    'article'
+    'footer';
+  grid-gap: 10px;
+  grid-template-rows: 13% 1fr 9%;
+}
+.App > #Main > #Nav {
+  grid-area: nav;
+  display: flex;
+  flex-flow: row, wrap;
+  background: #ebecf0;
+}
+button {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  border-width: 0px;
+  font-size: 22px;
+  margin: 10px;
+  max-height: 40px;
+}
+button:hover {
+  background-color: #be5afb;
+}
+.App > #Main > #Article {
+  grid-area: article;
+  background: #ebecf0;
+}
+.App > #Main > #Footer {
+  grid-area: footer;
+  background: #ebecf0;
+}
