@@ -2,91 +2,103 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import './App.css';
 
-function Img({ animal, type, jpg }) {
-  if (type == 'All') {
-    return (
-      <img
-        src={jpg}
-        alt="dog1"
-        width="100px"
-        height="100px"
-        align="center"
-        border="0"
-        /* className="postui" */
-      />
-    );
-  } else if (type == 'dog') {
-    if (animal == 'dog') {
-      return (
+function Posts({ data, selectedTag }) {
+  let pl = [];
+  if (selectedTag == 'all') {
+    for (let i = 0; i < data.length; i++) {
+      pl.push(
         <img
-          src={jpg}
+          key={data[i].img}
+          src={data[i].img}
           alt="dog1"
           width="100px"
           height="100px"
           align="center"
           border="0"
-          /* className="postui" */
         />
       );
     }
-  } else if (type == 'cat') {
-    if (animal == 'cat') {
-      return (
-        <img
-          src={jpg}
-          alt="dog1"
-          width="100px"
-          height="100px"
-          align="center"
-          border="0"
-          /* className="postui" */
-        />
-      );
+  } else {
+    for (let i = 0; i < data.length; i++) {
+      for (let j = 0; j < selectedTag.length; j++) {
+        if (selectedTag[j] == data[i].tag) {
+          <img
+            src={data[i].img}
+            alt="dog1"
+            width="100px"
+            height="100px"
+            align="center"
+            border="0"
+          />;
+        }
+      }
     }
   }
+  return <div>{pl}</div>;
+}
+
+function Tags({ tags, onChange }) {
+  let tl = [];
+  for (let i = 0; i < tags.length; i++) {
+    tl.push(
+      <button
+        key={i}
+        onClick={(event) => {
+          onChange(event.target.innerHTML);
+        }}
+      >
+        {tags[i]}
+      </button>
+    );
+  }
+  return <div>{tl}</div>;
 }
 
 export default function App() {
-  const [type, setType] = React.useState('All');
-  const selectAll = () => {
-    setType('All');
-  };
-  const selectDog = () => {
-    setType('dog');
-  };
+  const [all, setAll] = useState('all');
+  const [tagList, setTagList] = useState(['all', 'dog', 'cat']);
+  const [selectedTag, setSelectedTag] = useState([all]);
+  const [data, setData] = useState([
+    {
+      img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20220417_258%2F1650184513321BoHu1_JPEG%2F51320293024461210_729841342.jpg&type=sc960_832',
+      tag: 'dog',
+    },
+    {
+      img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20211127_207%2F1637987015405Y9waP_JPEG%2F39122904114070858_937714696.jpg&type=sc960_832',
+      tag: 'dog',
+    },
+    {
+      img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTVfMjEg%2FMDAxNjQ5OTkwOTM0NTk0.CRZs-E8NkFymigUo2TENVAlt8C987RD9DoGdTxP9zakg.Fe8dPkYpB0ia5p-du3IMFIwcLxTP8KYvWSqndpDrI3Yg.JPEG.wownd3007%2F20220415_113455.jpg&type=sc960_832',
+      tag: 'cat',
+    },
+  ]);
 
+  console.log(selectedTag);
   return (
     <div className="App">
       <header id="Header">Header</header>
       <main id="Main">
         <nav id="Nav">
-          <button onClick={selectAll}>전체</button>
-          <button onClick={selectDog}>개</button>
-          <button
-            onClick={() => {
-              setType('cat');
+          <Tags
+            tags={tagList}
+            onChange={(_tag) => {
+              selectedTag[0] === 'all'
+                ? _tag === 'all'
+                  ? null
+                  : (selectedTag.splice('all', 1),
+                    setSelectedTag([...selectedTag, _tag]))
+                : _tag === 'all'
+                ? (setSelectedTag(selectedTag.filter((tag) => tag === _tag)),
+                  setSelectedTag(['all']))
+                : selectedTag.includes(_tag)
+                ? setSelectedTag(selectedTag.filter((tag) => tag !== _tag))
+                : setSelectedTag([...selectedTag, _tag]);
             }}
-          >
-            고양이
-          </button>
+          />
         </nav>
 
         <article id="Article">
-          <Img
-            animal="dog"
-            type={type}
-            jpg="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20220417_258%2F1650184513321BoHu1_JPEG%2F51320293024461210_729841342.jpg&type=sc960_832"
-          />
-          <Img
-            animal="dog"
-            type={type}
-            jpg="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20211127_207%2F1637987015405Y9waP_JPEG%2F39122904114070858_937714696.jpg&type=sc960_832"
-          />
-          <Img
-            animal="cat"
-            type={type}
-            jpg="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTVfMjEg%2FMDAxNjQ5OTkwOTM0NTk0.CRZs-E8NkFymigUo2TENVAlt8C987RD9DoGdTxP9zakg.Fe8dPkYpB0ia5p-du3IMFIwcLxTP8KYvWSqndpDrI3Yg.JPEG.wownd3007%2F20220415_113455.jpg&type=sc960_832"
-          />
+          <Posts data={data} selectedTag={selectedTag}></Posts>
         </article>
         <footer id="Footer">Footer</footer>
       </main>
