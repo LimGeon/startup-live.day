@@ -6,34 +6,18 @@ function Posts({ data, selectedTag }) {
   let pl = [];
   if (selectedTag == 'all') {
     for (let i = 0; i < data.length; i++) {
-      pl.push(
-        <img
-          key={data[i].img}
-          src={data[i].img}
-          alt="dog1"
-          width="100px"
-          height="100px"
-          align="center"
-          border="0"
-        />
-      );
+      pl.push(<img key={data[i].img} src={data[i].img} alt="dog" />);
     }
   } else {
-    for (let i = 0; i < data.length; i++) {
-      for (let j = 0; j < selectedTag.length; j++) {
-        if (selectedTag[j] == data[i].tag) {
-          <img
-            src={data[i].img}
-            alt="dog1"
-            width="100px"
-            height="100px"
-            align="center"
-            border="0"
-          />;
+    for (let i = 0; i < selectedTag.length; i++) {
+      for (let j = 0; j < data.length; j++) {
+        if (selectedTag[i] == data[j].tag) {
+          pl.push(<img key={data[j].img} src={data[j].img} alt="dog" />);
         }
       }
     }
   }
+
   return <div>{pl}</div>;
 }
 

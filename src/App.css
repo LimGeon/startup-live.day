@@ -48,9 +48,7 @@ button {
   margin: 10px;
   max-height: 40px;
 }
-button:hover {
-  background-color: #be5afb;
-}
+
 .App > #Main > #Article {
   grid-area: article;
   background: #ebecf0;
@@ -58,4 +56,38 @@ button:hover {
 .App > #Main > #Footer {
   grid-area: footer;
   background: #ebecf0;
+}
+img {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  border: 0;
+  margin: 10px;
+}
+
+button {
+  list-style: none;
+  padding: 0.2rem 1.5rem;
+  background-color: #ebecf0;
+  box-shadow: 4px 4px 6px rgba(55, 84, 170, 0.15),
+    -4px -4px 6px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 1);
+}
+button:hover,
+button:focus {
+  outline: none;
+  transform: scale(0.95);
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 1),
+    4px 4px 10px 0 rgba(0, 0, 0, 0.1) inset,
+    -4px -4px 10px rgba(255, 255, 255, 1) inset;
+  /* color: orangered; */
 }
