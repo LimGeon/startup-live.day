@@ -22,7 +22,7 @@ function Posts({ data, selectedTag }) {
 }
 
 export default function App() {
-  const [tagList, setTagList] = useState(['dog', 'cat']);
+  const [tagList, setTagList] = useState([]);
   const [selectedTag, setSelectedTag] = useState([]);
   const getTag = (selectedTag) => {
     setSelectedTag(selectedTag);
@@ -41,6 +41,11 @@ export default function App() {
       tag: 'cat',
     },
   ]);
+  for (let i = 0; i < data.length; i++) {
+    if (!tagList.includes(data[i].tag)) {
+      setTagList([...tagList, data[i].tag]);
+    }
+  }
 
   console.log(selectedTag);
   return (
