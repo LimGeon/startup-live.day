@@ -21,19 +21,41 @@ function Posts({ data, selectedTag }) {
   return <div>{pl}</div>;
 }
 
-function Tags({ tags, onChange }) {
+function Tag({ name, onChange }) {
+  return (
+    <button
+      onClick={(event) => {
+        onChange(event.target.innerHTML);
+      }}
+    >
+      {name}
+    </button>
+  );
+}
+function Tags({ tagList, selectedTag, reSelectedTag }) {
   let tl = [];
-  for (let i = 0; i < tags.length; i++) {
-    tl.push(
-      <button
-        key={i}
-        onClick={(event) => {
-          onChange(event.target.innerHTML);
-        }}
-      >
-        {tags[i]}
-      </button>
-    );
+  for (let i = 0; i < tagList.length; i++) {
+    if (tagList[i] === 'all') {
+      tl.push(
+        <Tag
+          name={tagList[i]}
+          onChange={(_tag) => {
+            selectedTag[0] === 'all' ? null : reSelectedTag('all');
+          }}
+        />
+      );
+    } else {
+      tl.push(
+        <Tag
+          name={tagList[i]}
+          onChange={(_tag) => {
+            selectedTag.includes(_tag)
+              ? reSelectedTag(selectedTag.filter((tag) => tag !== _tag))
+              : reSelectedTag([...selectedTag, _tag]);
+          }}
+        />
+      );
+    }
   }
   return <div>{tl}</div>;
 }
@@ -41,7 +63,10 @@ function Tags({ tags, onChange }) {
 export default function App() {
   const [all, setAll] = useState('all');
   const [tagList, setTagList] = useState(['all', 'dog', 'cat']);
-  const [selectedTag, setSelectedTag] = useState([all]);
+  const [selectedTag, setSelectedTag] = useState([]);
+  const reSelectedTag = (selectedTag) => {
+    setSelectedTag(selectedTag);
+  };
   const [data, setData] = useState([
     {
       img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20220417_258%2F1650184513321BoHu1_JPEG%2F51320293024461210_729841342.jpg&type=sc960_832',
@@ -64,23 +89,11 @@ export default function App() {
       <main id="Main">
         <nav id="Nav">
           <Tags
-            tags={tagList}
-            onChange={(_tag) => {
-              selectedTag[0] === 'all'
-                ? _tag === 'all'
-                  ? null
-                  : (selectedTag.splice('all', 1),
-                    setSelectedTag([...selectedTag, _tag]))
-                : _tag === 'all'
-                ? (setSelectedTag(selectedTag.filter((tag) => tag === _tag)),
-                  setSelectedTag(['all']))
-                : selectedTag.includes(_tag)
-                ? setSelectedTag(selectedTag.filter((tag) => tag !== _tag))
-                : setSelectedTag([...selectedTag, _tag]);
-            }}
+            tagList={tagList}
+            selectedTag={selectedTag}
+            reSelectedTag={reSelectedTag}
           />
         </nav>
-
         <article id="Article">
           <Posts data={data} selectedTag={selectedTag}></Posts>
         </article>
