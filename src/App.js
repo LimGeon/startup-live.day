@@ -18,7 +18,6 @@ function Posts({ data, selectedTag }) {
       }
     }
   }
-
   return <div>{pl}</div>;
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import './App.css';
 
+let num = 0;
 function Tag({ name, onChange }) {
   return (
     <button
@@ -17,6 +18,7 @@ function Tags({ tagList, selectedTag, getTag }) {
   let tl = [];
   tl.push(
     <Tag
+      key={num++}
       name={'all'}
       onChange={() => {
         getTag('');
