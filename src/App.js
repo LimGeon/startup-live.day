@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import './App.css';
+import Tags from './Tag.js';
 
 function Posts({ data, selectedTag }) {
   let pl = [];
-  if (selectedTag == 'all') {
+  if (selectedTag.length === 0) {
     for (let i = 0; i < data.length; i++) {
       pl.push(<img key={data[i].img} src={data[i].img} alt="dog" />);
     }
@@ -21,50 +22,10 @@ function Posts({ data, selectedTag }) {
   return <div>{pl}</div>;
 }
 
-function Tag({ name, onChange }) {
-  return (
-    <button
-      onClick={(event) => {
-        onChange(event.target.innerHTML);
-      }}
-    >
-      {name}
-    </button>
-  );
-}
-function Tags({ tagList, selectedTag, reSelectedTag }) {
-  let tl = [];
-  for (let i = 0; i < tagList.length; i++) {
-    if (tagList[i] === 'all') {
-      tl.push(
-        <Tag
-          name={tagList[i]}
-          onChange={(_tag) => {
-            selectedTag[0] === 'all' ? null : reSelectedTag('all');
-          }}
-        />
-      );
-    } else {
-      tl.push(
-        <Tag
-          name={tagList[i]}
-          onChange={(_tag) => {
-            selectedTag.includes(_tag)
-              ? reSelectedTag(selectedTag.filter((tag) => tag !== _tag))
-              : reSelectedTag([...selectedTag, _tag]);
-          }}
-        />
-      );
-    }
-  }
-  return <div>{tl}</div>;
-}
-
 export default function App() {
-  const [all, setAll] = useState('all');
-  const [tagList, setTagList] = useState(['all', 'dog', 'cat']);
+  const [tagList, setTagList] = useState(['dog', 'cat']);
   const [selectedTag, setSelectedTag] = useState([]);
-  const reSelectedTag = (selectedTag) => {
+  const getTag = (selectedTag) => {
     setSelectedTag(selectedTag);
   };
   const [data, setData] = useState([
@@ -88,11 +49,7 @@ export default function App() {
       <header id="Header">Header</header>
       <main id="Main">
         <nav id="Nav">
-          <Tags
-            tagList={tagList}
-            selectedTag={selectedTag}
-            reSelectedTag={reSelectedTag}
-          />
+          <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
         </nav>
         <article id="Article">
           <Posts data={data} selectedTag={selectedTag}></Posts>
