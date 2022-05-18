@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './root.css';
 import './App.css';
 import './Tag.css';
+import './Post.js';
 import Tags from './Tag.js';
 
-function Posts({ data, selectedTag }) {
+function Posts({ data, selectedTag, user }) {
   let pl = [];
   if (selectedTag.length === 0) {
     for (let i = 0; i < data.length; i++) {
@@ -14,7 +15,7 @@ function Posts({ data, selectedTag }) {
     for (let i = 0; i < selectedTag.length; i++) {
       for (let j = 0; j < data.length; j++) {
         if (selectedTag[i] == data[j].tag) {
-          pl.push(<img key={data[j].img} src={data[j].img} alt="dog" />);
+          pl.push(<img key={user[j].img} src={data[j].img} alt="dog" />);
         }
       }
     }
@@ -47,6 +48,18 @@ export default function App() {
       setTagList([...tagList, data[i].tag]);
     }
   }
+  const [user, setUser] = useState([
+    {
+      img: 'https://lh3.google.com/p/AF1QipOV8L3btjx1hDsMthdPlyh6B5OGaMEhDkqf11Qb=s124-c-U',
+      name: '빡빡이',
+      field: '개발자',
+    },
+    {
+      img: 'https://lh3.google.com/p/AF1QipPeBgHu1e5jNhd-trvC8OY7xKG4_6YdZ7LIafbf=s124-c-U',
+      name: '장발',
+      field: '개발자',
+    },
+  ]);
 
   console.log(selectedTag);
   return (
@@ -57,7 +70,7 @@ export default function App() {
           <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
         </nav>
         <article id="Article">
-          <Posts data={data} selectedTag={selectedTag}></Posts>
+          <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
         </article>
         <footer id="Footer">Footer</footer>
       </main>

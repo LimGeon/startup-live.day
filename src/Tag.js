@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import './styles.css';
 import './App.css';
+import './root.css';
+import './Tag.css';
 
 let num = 0;
 function Tag({ name, onChange }) {
   return (
     <button
+      className="Btn"
       onClick={(event) => {
         onChange(event.target.innerHTML);
       }}

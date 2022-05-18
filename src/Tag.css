@@ -1,0 +1,29 @@
+.Btn {
+  list-style: none;
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.7rem;
+  background-color: var(--background-color);
+  box-shadow: 4px 4px 6px rgba(55, 84, 170, 0.15),
+    -4px -4px 6px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  border-radius: 10px;
+  border-width: 0px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.Btn:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 1);
+  color: orangered;
+}
+.Btn:focus {
+  outline: none;
+  transform: scale(0.95);
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 1),
+    4px 4px 10px 0 rgba(0, 0, 0, 0.1) inset,
+    -4px -4px 10px rgba(255, 255, 255, 1) inset;
+  color: orangered;
+}
