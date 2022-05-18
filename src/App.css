@@ -13,15 +13,15 @@
 }
 .App > #Header {
   grid-area: head;
-  background: #ebecf0;
+  background: var(--background-color);
 }
 .App > #Side_left {
   grid-area: left;
-  background: #ebecf0;
+  background: var(--background-color);
 }
 .App > #Side_right {
   grid-area: right;
-  background: #ebecf0;
+  background: var(--background-color);
 }
 .App > #Main {
   grid-area: main;
@@ -37,57 +37,32 @@
   grid-area: nav;
   display: flex;
   flex-flow: row, wrap;
-  background: #ebecf0;
-}
-button {
-  background-color: white;
-  border-radius: 10px;
-  color: black;
-  border-width: 0px;
-  font-size: 22px;
-  margin: 10px;
-  max-height: 40px;
+  background: var(--background-color);
 }
 
 .App > #Main > #Article {
   grid-area: article;
-  background: #ebecf0;
+  background: var(--background-color);
 }
+.App > #Main > #Article > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  width:100%;
+  height:100%;
+}
+
 .App > #Main > #Footer {
   grid-area: footer;
-  background: #ebecf0;
+  background: var(--background-color);
 }
 img {
-  width: 100px;
-  height: 100px;
+/*   display: flex;
+  align-content: center; */
+  width: 200px;
+  height: 200px;
   align-items: center;
   border: 0;
   margin: 10px;
-}
-
-button {
-  list-style: none;
-  padding: 0.2rem 1.5rem;
-  background-color: #ebecf0;
-  box-shadow: 4px 4px 6px rgba(55, 84, 170, 0.15),
-    -4px -4px 6px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: color 0.2s ease-out, transform 0.2s ease-out;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
-    -4px -4px 10px rgba(255, 255, 255, 1);
-}
-button:hover,
-button:focus {
-  outline: none;
-  transform: scale(0.95);
-  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
-    -4px -4px 10px rgba(255, 255, 255, 1),
-    4px 4px 10px 0 rgba(0, 0, 0, 0.1) inset,
-    -4px -4px 10px rgba(255, 255, 255, 1) inset;
-  color: orangered;
 }

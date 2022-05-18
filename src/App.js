@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './styles.css';
+import './root.css';
 import './App.css';
+import './Tag.css';
 import Tags from './Tag.js';
 
 function Posts({ data, selectedTag }) {
