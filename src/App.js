@@ -5,6 +5,16 @@ import './Tag.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
 
+function Users({ user }) {
+  return (
+    <div className="userTag">
+      <img src={user[0].img} className="userPic" />
+      <div className="userName">{user[0].name}</div>
+      <div className="userField">{user[0].field}</div>
+    </div>
+  );
+}
+
 export default function App() {
   const [tagList, setTagList] = useState([]);
   const [selectedTag, setSelectedTag] = useState([]);
@@ -54,7 +64,9 @@ export default function App() {
         <article id="Article">
           <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
         </article>
-        <footer id="Footer">Footer</footer>
+        <footer id="Footer">
+          <Users user={user} />
+        </footer>
       </main>
       <aside id="Side_left">left</aside>
       <aside id="Side_right">right</aside>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-function Post()
+function Post() {
+  
+}
 
 function Posts({ data, selectedTag, user }) {
   let pl = [];
