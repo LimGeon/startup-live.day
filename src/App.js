@@ -2,15 +2,23 @@ import React, { useEffect, useState } from 'react';
 import './root.css';
 import './App.css';
 import './Tag.css';
+import './Post.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
 
-function Users({ user }) {
+function Post({ data, selectedTag, user }) {
   return (
-    <div className="userTag">
-      <img src={user[0].img} className="userPic" />
-      <div className="userName">{user[0].name}</div>
-      <div className="userField">{user[0].field}</div>
+    <div className="Post">
+      <div className="userTag">
+        <img src={user[0].img} className="userPic" />
+        <div className="userInf">
+          <div className="userName">{user[0].name}</div>
+          <div className="userField">{user[0].field}</div>
+        </div>
+      </div>
+      <div className="content">
+        <img key={data[0].img} src={data[0].img} alt="dog" />
+      </div>
     </div>
   );
 }
@@ -65,7 +73,7 @@ export default function App() {
           <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
         </article>
         <footer id="Footer">
-          <Users user={user} />
+          <Post data={data} selectedTag={selectedTag} user={user}></Post>
         </footer>
       </main>
       <aside id="Side_left">left</aside>

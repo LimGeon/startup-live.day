@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from 'react';
-function Post() {
-  
+import './Post.css';
+
+function Post({ data, selectedTag, user }) {
+  return (
+    <div className="Post">
+      <div className="userTag">
+        <img src={user[0].img} className="userPic" />
+        <div className="userInf">
+          <div className="userName">{user[0].name}</div>
+          <div className="userField">{user[0].field}</div>
+        </div>
+      </div>
+      <div className="content"></div>
+    </div>
+  );
 }
 
 function Posts({ data, selectedTag, user }) {

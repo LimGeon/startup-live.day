@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import './root.css';
 import './Tag.css';
+import './Post.css';
 
 let num = 0;
 function Tag({ name, onChange }) {

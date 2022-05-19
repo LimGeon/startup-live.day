@@ -1,0 +1,52 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+.userTag {
+  display: flex;
+  padding: 0px 2% 0px 0px;
+}
+
+.userTag > .userPic {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out 0s;
+  border: 1px solid transparent;
+  margin-top: 0px;
+  /*   margin-bottom: 12px; */
+  line-height: 1.3em;
+  padding-top: 2px;
+  min-width: 0px;
+  width: 45px;
+  height: 45px;
+}
+.userTag > .userInf {
+  display: flex;
+  flex-direction: column;
+  color: rgb(112, 112, 112);
+  font-size: 0.875rem;
+  margin-top: 0px;
+  /*   margin-bottom: 12px; */
+  line-height: 1.3em;
+  padding-top: 2px;
+  min-width: 0px;
+}
+
+.userTag > .userName {
+  grid-area: name;
+}
+.userTag > .userField {
+  grid-area: field;
+}
+.content {
+  background-color: var(--white-color);
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  border: 0;
+}

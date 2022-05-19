@@ -19,8 +19,8 @@
   list-style: none;
 }
 body {
-  height: 100vh;
   font-family: 'Raleway', sans-serif;
   font-size: 17px;
-  background-size: cover;
+  overflow: visible;
+  touch-action: auto;
 }
