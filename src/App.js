@@ -2,26 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './root.css';
 import './App.css';
 import './Tag.css';
-import './Post.js';
+import Posts from './Post.js';
 import Tags from './Tag.js';
-
-function Posts({ data, selectedTag, user }) {
-  let pl = [];
-  if (selectedTag.length === 0) {
-    for (let i = 0; i < data.length; i++) {
-      pl.push(<img key={data[i].img} src={data[i].img} alt="dog" />);
-    }
-  } else {
-    for (let i = 0; i < selectedTag.length; i++) {
-      for (let j = 0; j < data.length; j++) {
-        if (selectedTag[i] == data[j].tag) {
-          pl.push(<img key={user[j].img} src={data[j].img} alt="dog" />);
-        }
-      }
-    }
-  }
-  return <div>{pl}</div>;
-}
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
@@ -64,7 +46,7 @@ export default function App() {
   console.log(selectedTag);
   return (
     <div className="App">
-      <header id="Header">Header</header>
+      <header id="Header"></header>
       <main id="Main">
         <nav id="Nav">
           <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />

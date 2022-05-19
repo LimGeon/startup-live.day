@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 function Post()
 
 function Posts({ data, selectedTag, user }) {
@@ -10,7 +11,7 @@ function Posts({ data, selectedTag, user }) {
     for (let i = 0; i < selectedTag.length; i++) {
       for (let j = 0; j < data.length; j++) {
         if (selectedTag[i] == data[j].tag) {
-          pl.push(<img key={user[j].img} src={data[j].img} alt="dog" />);
+          pl.push(<img key={data[j].img} src={data[j].img} alt="dog" />);
         }
       }
     }
