@@ -6,7 +6,7 @@ import './Post.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
 
-function Post({ data, selectedTag, user }) {
+/* function Post({ data, selectedTag, user }) {
   return (
     <div className="Post">
       <div className="userTag">
@@ -21,7 +21,7 @@ function Post({ data, selectedTag, user }) {
       </div>
     </div>
   );
-}
+} */
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
@@ -64,20 +64,24 @@ export default function App() {
   console.log(selectedTag);
   return (
     <div className="App">
-      <header id="Header"></header>
-      <main id="Main">
-        <nav id="Nav">
-          <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
-        </nav>
-        <article id="Article">
-          <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
-        </article>
-        <footer id="Footer">
-          <Post data={data} selectedTag={selectedTag} user={user}></Post>
-        </footer>
+      <header className="Header">
+        <div className="Logo">startupLive.day</div>
+        <div className="Bar">
+          <div>Home</div>
+          <div>About</div>
+          <div>Open Chat</div>
+          <div>Content</div>
+        </div>
+      </header>
+      <nav className="Nav">
+        <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
+      </nav>
+      <main className="Main">
+        <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
       </main>
-      <aside id="Side_left">left</aside>
-      <aside id="Side_right">right</aside>
+      <footer className="Footer">
+        {/*         <Post data={data} selectedTag={selectedTag} user={user}></Post> */}
+      </footer>
     </div>
   );
 }

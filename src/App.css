@@ -1,50 +1,54 @@
 .App {
   text-align: center;
-  display: grid;
-  grid-template-areas:
-    'head head head'
-    'left main right';
-  grid-template-rows: 7% 1fr;
-  grid-template-columns: 10% 1fr 10%;
-  grid-gap: 10px;
-  padding: 0px 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  padding: 0px;
+  gap: 40px;
   height: 100vh;
-  margin: 0px;
+  max-width: 1080px;
+  margin: auto;
 }
-.App > #Header {
-  grid-area: head;
-  background: var(--background-color);
+.App > .Header {
+  display: flex;
+  flex-flow: row, nowrap;
+  justify-content: space-between;
+  height: 8%;
+  align-items: center;
 }
-.App > #Side_left {
-  grid-area: left;
-  background: var(--background-color);
+.App > .Header > .Bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 49px;
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  letter-spacing: -0.005em;
+  text-transform: capitalize;
+
+  /* Grey / 3 */
+
+  color: #555555;
 }
-.App > #Side_right {
-  grid-area: right;
-  background: var(--background-color);
-}
-.App > #Main {
-  grid-area: main;
-  display: grid;
-  grid-template-areas:
-    'nav'
-    'article'
-    'footer';
-  grid-gap: 10px;
-  grid-template-rows: 13% 1fr 9%;
-}
-.App > #Main > #Nav {
-  grid-area: nav;
+.App > .Nav {
   display: flex;
   flex-flow: row, wrap;
   background: var(--background-color);
 }
+.App > .Main {
+  grid-area: main;
+}
 
-.App > #Main > #Article {
-  grid-area: article;
+.App > .Main {
   background: var(--background-color);
 }
-.App > #Main > #Article > div {
+.App > .Main > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -53,8 +57,7 @@
   height: 100%;
 }
 
-.App > #Main > #Footer {
-  grid-area: footer;
+.App > .Footer {
   background: var(--background-color);
 }
 img {
