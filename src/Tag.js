@@ -42,7 +42,7 @@ function Tags({ tagList, selectedTag, getTag }) {
       );
     }
   }
-  return <div>{tl}</div>;
+  return <div className="Tags">{tl}</div>;
 }
 
 export default Tags;

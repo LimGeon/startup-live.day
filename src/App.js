@@ -80,10 +80,13 @@ export default function App() {
         </div>
       </header>
       <nav className="Nav">
-        <div className="nava">태그로 원하는 웨비나를 찾을 수 있어요.</div>
+        <div className="writing">태그로 원하는 웨비나를 찾을 수 있어요.</div>
         <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
       </nav>
       <main className="Main">
+        <div className="writing">
+          당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
+        </div>
         <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
       </main>
       <footer className="Footer">

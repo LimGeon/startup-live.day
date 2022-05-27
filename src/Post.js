@@ -31,7 +31,7 @@ function Posts({ data, selectedTag, user }) {
       }
     }
   }
-  return <div>{pl}</div>;
+  return <div className="Posts">{pl}</div>;
 }
 
 export default Posts;
