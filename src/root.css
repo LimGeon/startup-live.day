@@ -24,3 +24,7 @@ body {
   overflow: visible;
   touch-action: auto;
 }
+.qwe {
+  width: 100px;
+  height: 40px;
+}

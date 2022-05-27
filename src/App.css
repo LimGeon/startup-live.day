@@ -33,13 +33,27 @@
   text-transform: capitalize;
 
   /* Grey / 3 */
-
   color: #555555;
 }
 .App > .Nav {
   display: flex;
-  flex-flow: row, wrap;
-  background: var(--background-color);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  height: 9%;
+}
+.App > .Nav > .nava {
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+
+  letter-spacing: -0.005em;
+  text-transform: capitalize;
 }
 .App > .Main {
   grid-area: main;

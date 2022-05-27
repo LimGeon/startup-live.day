@@ -65,7 +65,13 @@ export default function App() {
   return (
     <div className="App">
       <header className="Header">
-        <div className="Logo">startupLive.day</div>
+        <div className="Logo">
+          <img
+            className="qwe"
+            src="https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/Logo.png"
+            alt="임시?"
+          />
+        </div>
         <div className="Bar">
           <div>Home</div>
           <div>About</div>
@@ -74,6 +80,7 @@ export default function App() {
         </div>
       </header>
       <nav className="Nav">
+        <div className="nava">태그로 원하는 웨비나를 찾을 수 있어요.</div>
         <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
       </nav>
       <main className="Main">
