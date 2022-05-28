@@ -1,15 +1,36 @@
 .Post {
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
-}
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
 
-.userTag {
+  width: 528px;
+  height: 663px;
+
+  background: #ffffff;
+  /* Grey/1 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+}
+.Post .postHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 0px;
+  gap: 16px;
+
+  width: 528px;
+  height: 54px;
+}
+.Post > .postHead > .userTag {
   display: flex;
   padding: 0px 2% 0px 0px;
 }
 
-.userTag > .userPic {
+.Post > .postHead > .userTag > .userPic {
   display: flex;
   flex-direction: column;
   margin-right: 8px;
@@ -24,9 +45,10 @@
   width: 45px;
   height: 45px;
 }
-.userTag > .userInf {
+.Post > .postHead > .userTag > .userInf {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   color: rgb(112, 112, 112);
   font-size: 0.875rem;
   margin-top: 0px;
@@ -36,11 +58,63 @@
   min-width: 0px;
 }
 
-.userTag > .userName {
+.Post > .postHead > .userTag > .userInf > .userName {
   grid-area: name;
 }
-.userTag > .userField {
+.Post > .postHead > .userTag > .userInf > .userName > .userNameFont {
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  /* identical to box height, or 21px */
+
+  letter-spacing: -0 5em;
+
+  color: #000000;
+}
+.Post > .postHead > .userTag > .userInf > .userTime {
   grid-area: field;
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  /* identical to box height, or 21px */
+
+  letter-spacing: -0.005em;
+
+  /* Text/general */
+
+  color: #13172f;
+}
+.Post .postHead .insertWebina {
+  display: flex;
+  flex-flow: row, nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 16px;
+
+  width: 163.44px;
+  height: 38px;
+
+  background: #efefef;
+  border: 1px solid #e1e1e1;
+  border-radius: 16px;
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+
+  letter-spacing: -0.005em;
+  text-transform: capitalize;
+
+  /* Grey / 3 */
+
+  color: #555555;
 }
 .content {
   background-color: var(--white-color);

@@ -51,16 +51,30 @@ export default function App() {
   const [user, setUser] = useState([
     {
       img: 'https://lh3.google.com/p/AF1QipOV8L3btjx1hDsMthdPlyh6B5OGaMEhDkqf11Qb=s124-c-U',
-      name: '빡빡이',
-      field: '개발자',
+      name: 'CLASSUM',
+      time: '4월 28일(목) 오후 7시',
     },
     {
       img: 'https://lh3.google.com/p/AF1QipPeBgHu1e5jNhd-trvC8OY7xKG4_6YdZ7LIafbf=s124-c-U',
       name: '장발',
-      field: '개발자',
     },
   ]);
-
+  const [content, setcontent] = useState([
+    {
+      name: '상시 학습이 일어나는 학습 조직 만들기',
+      which: [
+        '스타트업에서 만난 살아 숨쉬는 학습조직 - 박세헌 | 언픽셀 경영지원총괄 & 기업전략실',
+        '카훗과 함꼐 멋진 학습 조직 만들기 - 제임스 미클웨이트 | Kahoot! at work 부사장',
+        '상시 학습이 일어나는 조직을 만들 때 피해야 할 3가지 실수 - 이채린 | 클라썸 CEO',
+        '질의응답',
+      ],
+      forWho: [
+        '4대보험 신고를 해야 하는데 어떻게 시작해야 할지 모르겠는 HR 담당자/대포님',
+        '4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀',
+        '4대보험 신고부터 모든 HR업무를 나홀로 하느라 효율적인 방법을 찾고 있는 대표',
+      ],
+    },
+  ]);
   console.log(selectedTag);
   return (
     <div className="App">
@@ -87,7 +101,12 @@ export default function App() {
         <div className="writing">
           당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
         </div>
-        <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
+        <Posts
+          data={data}
+          selectedTag={selectedTag}
+          user={user}
+          content={content}
+        ></Posts>
       </main>
       <footer className="Footer">
         {/*         <Post data={data} selectedTag={selectedTag} user={user}></Post> */}
