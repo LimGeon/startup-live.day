@@ -49,8 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: rgb(112, 112, 112);
-  font-size: 0.875rem;
+  font-size: var(--small-font-size);
   margin-top: 0px;
   /*   margin-bottom: 12px; */
   line-height: 1.3em;
@@ -61,32 +60,20 @@
 .Post > .postHead > .userTag > .userInf > .userName {
   grid-area: name;
 }
+.Post > .postHead > .userTag > .userInf > .userName > .by{
+  text-transform: lowercase;
+}
 .Post > .postHead > .userTag > .userInf > .userName > .userNameFont {
-  font-family: 'Pretendard Variable';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 550;
+  font-size: var(--small-font-size);
   line-height: 150%;
-  /* identical to box height, or 21px */
-
-  letter-spacing: -0 5em;
-
   color: #000000;
 }
 .Post > .postHead > .userTag > .userInf > .userTime {
   grid-area: field;
-  font-family: 'Pretendard Variable';
-  font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--small-font-size);
   line-height: 150%;
-  /* identical to box height, or 21px */
-
-  letter-spacing: -0.005em;
-
-  /* Text/general */
-
-  color: #13172f;
 }
 .Post .postHead .insertWebina {
   display: flex;
@@ -102,25 +89,49 @@
   background: #efefef;
   border: 1px solid #e1e1e1;
   border-radius: 16px;
-  font-family: 'Pretendard Variable';
-  font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--small-font-size);
   line-height: 100%;
-  /* identical to box height, or 14px */
-
-  letter-spacing: -0.005em;
-  text-transform: capitalize;
-
-  /* Grey / 3 */
-
   color: #555555;
 }
-.content {
-  background-color: var(--white-color);
-  border-radius: 10%;
-  width: 200px;
-  height: 200px;
+.PostPic {
   align-items: center;
   border: 0;
+  width: 528px;
+  height: 297px;
+}
+.Post > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 16px 16px;
+  gap: 16px;
+}
+.Post > .content > .contentName {
+  font-weight: 600;
+  font-size: var(--big2-font-size);
+  line-height: 100%;
+}
+.Post > .content > .contentMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+}
+.Post > .content > .contentMain > .contentWhich {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+}
+.Post > .content > .contentMain > .contentWhich > .contentWhichWhat {
+font-size: 1.08rem;
+font-weight:550;
+}
+.Post > .content > .contentMain > .contentWhich > .contentWhichUl {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300px;
 }

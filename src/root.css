@@ -10,7 +10,13 @@
   --side-padding: 12px;
   --big-padding: 36px;
   --big-fontsize: 24px;
-  --font-size: 18px;
+
+  /* font-size */
+  --small-font-size: 0.875rem;
+  --main-font-size: 1rem;
+  --big-font-size: 1.125rem;
+  --big2-font-size: 1.5rem;
+  --large-font-size: 2.5rem;
 }
 * {
   padding: 0;
@@ -19,10 +25,24 @@
   list-style: none;
 }
 body {
-  font-family: 'Raleway', sans-serif;
-  font-size: 17px;
   overflow: visible;
   touch-action: auto;
+
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  /* 14px : 0.875
+     16px : 1 
+     18px : 1.125
+     24px : 2.5
+  */
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  letter-spacing: -0.005em;
+  text-transform: capitalize;
+  /* Text/general */
+  color: #13172f;
 }
 .qwe {
   width: 100px;

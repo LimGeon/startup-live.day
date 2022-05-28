@@ -6,23 +6,6 @@ import './Post.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
 
-/* function Post({ data, selectedTag, user }) {
-  return (
-    <div className="Post">
-      <div className="userTag">
-        <img src={user[0].img} className="userPic" />
-        <div className="userInf">
-          <div className="userName">{user[0].name}</div>
-          <div className="userField">{user[0].field}</div>
-        </div>
-      </div>
-      <div className="content">
-        <img key={data[0].img} src={data[0].img} alt="dog" />
-      </div>
-    </div>
-  );
-} */
-
 export default function App() {
   const [tagList, setTagList] = useState([]);
   const [selectedTag, setSelectedTag] = useState([]);
@@ -31,15 +14,15 @@ export default function App() {
   };
   const [data, setData] = useState([
     {
-      img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20220417_258%2F1650184513321BoHu1_JPEG%2F51320293024461210_729841342.jpg&type=sc960_832',
+      img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
       tag: 'dog',
     },
     {
-      img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20211127_207%2F1637987015405Y9waP_JPEG%2F39122904114070858_937714696.jpg&type=sc960_832',
+      img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
       tag: 'dog',
     },
     {
-      img: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTVfMjEg%2FMDAxNjQ5OTkwOTM0NTk0.CRZs-E8NkFymigUo2TENVAlt8C987RD9DoGdTxP9zakg.Fe8dPkYpB0ia5p-du3IMFIwcLxTP8KYvWSqndpDrI3Yg.JPEG.wownd3007%2F20220415_113455.jpg&type=sc960_832',
+      img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
       tag: 'cat',
     },
   ]);
