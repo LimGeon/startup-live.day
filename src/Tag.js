@@ -14,12 +14,7 @@ function Tag({ name, onChange }) {
         onChange(event.target.innerHTML);
       }}
     >
-      <img
-        src={checkImg}
-        style={{
-          visibility: 'hidden',
-        }}
-      />
+      <img className="BtnCheckImg" src={checkImg} />
       {name}
     </button>
   );

@@ -131,13 +131,17 @@
   font-weight: 550;
 }
 .Post > .content > .contentMain > .content_letter > .letterContent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   font-size: var(--small-font-size);
+  font-weight: 300;
   letter-spacing: -0.005em;
-  line-height: 150%;
-  font-weight: 300px;
 
-  letter-spacing: -0.005em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.4em;
+  height: 5.6em;
+  text-align: justify;
 }

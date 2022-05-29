@@ -1,23 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Post.css';
 
-/* function Post({ data, selectedTag, user }) {
-  return (
-    <div className="Post">
-      <div className="userTag">
-        <img src={user[0].img} className="userPic" />
-        <div className="userInf">
-          <div className="userName">{user[0].name}</div>
-          <div className="userField">{user[0].field}</div>
-        </div>
-      </div>
-      <div className="content">
-        <img key={data[0].img} src={data[0].img} alt="dog" />
-      </div>
-    </div>
-  );
-} */
-
 function Posts({ data, selectedTag, user, content }) {
   let pl = [];
   if (selectedTag.length === 0) {
@@ -53,13 +36,11 @@ function Posts({ data, selectedTag, user, content }) {
               </div>
               <div className="content_letter">
                 <div className="letterHead">이런 분들이 들으면 좋아요</div>
-                <div className="letterContent">
-                  <ul>
-                    {content[0].forWho.map((text) => (
-                      <li>📌{text}</li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="letterContent">
+                  {content[0].forWho.map((text) => (
+                    <li>📌{text}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
