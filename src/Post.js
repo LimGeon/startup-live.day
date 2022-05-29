@@ -43,20 +43,23 @@ function Posts({ data, selectedTag, user, content }) {
           <div className="content">
             <div className="contentName">{content[0].name}</div>
             <div className="contentMain">
-              <div className="contentWhich">
-                <div className="contentWhichWhat">어떤 웨비나인가요?</div>
-                <ul className="contentWhichUl">
+              <div className="content_letter">
+                <div className="letterHead">어떤 웨비나인가요?</div>
+                <ul className="letterContent">
                   {content[0].which.map((text) => (
-                    <li>{text}</li>
+                    <li>💡{text}</li>
                   ))}
                 </ul>
               </div>
-              <div className="contentForWho">
-                <ul>
-                  {content[0].forWho.map((text) => (
-                    <li>{text}</li>
-                  ))}
-                </ul>
+              <div className="content_letter">
+                <div className="letterHead">이런 분들이 들으면 좋아요</div>
+                <div className="letterContent">
+                  <ul>
+                    {content[0].forWho.map((text) => (
+                      <li>📌{text}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

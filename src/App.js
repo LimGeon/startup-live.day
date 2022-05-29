@@ -5,6 +5,10 @@ import './Tag.css';
 import './Post.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
+import Logo from './Img/logo.svg';
+import bookImg from './Img/bookImg.svg';
+import earthImg from './Img/Earth.svg';
+import checkImg from './Img/check.svg';
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
@@ -63,26 +67,39 @@ export default function App() {
     <div className="App">
       <header className="Header">
         <div className="Logo">
-          <img
-            className="qwe"
-            src="https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/Logo.png"
-            alt="임시?"
-          />
+          <img className="LLogo" src={Logo} alt="Logo" />
         </div>
-        <div className="Bar">
-          <div>Home</div>
-          <div>About</div>
-          <div>Open Chat</div>
-          <div>Content</div>
-        </div>
+        <ul className="Bar">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Open Chat</a>
+          </li>
+          <li>
+            <a href="#">Content</a>
+          </li>
+          <li>
+            <a href="#">Bookings</a>
+          </li>
+        </ul>
       </header>
       <nav className="Nav">
-        <div className="writing">태그로 원하는 웨비나를 찾을 수 있어요.</div>
+        <div className="Nav_write">
+          <img src={bookImg} alt="bookImg" />
+          <div className="writing">태그로 원하는 웨비나를 찾을 수 있어요.</div>
+        </div>
         <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
       </nav>
       <main className="Main">
-        <div className="writing">
-          당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
+        <div className="Main_write">
+          <img src={earthImg} alt="EarthImg" />
+          <div className="writing">
+            당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
+          </div>
         </div>
         <Posts
           data={data}

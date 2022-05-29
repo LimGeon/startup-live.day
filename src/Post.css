@@ -60,7 +60,7 @@
 .Post > .postHead > .userTag > .userInf > .userName {
   grid-area: name;
 }
-.Post > .postHead > .userTag > .userInf > .userName > .by{
+.Post > .postHead > .userTag > .userInf > .userName > .by {
   text-transform: lowercase;
 }
 .Post > .postHead > .userTag > .userInf > .userName > .userNameFont {
@@ -97,8 +97,8 @@
 .PostPic {
   align-items: center;
   border: 0;
-  width: 528px;
-  height: 297px;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 .Post > .content {
   display: flex;
@@ -119,19 +119,25 @@
   padding: 0px;
   gap: 16px;
 }
-.Post > .content > .contentMain > .contentWhich {
+.Post > .content > .contentMain > .content_letter {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
 }
-.Post > .content > .contentMain > .contentWhich > .contentWhichWhat {
-font-size: 1.08rem;
-font-weight:550;
+.Post > .content > .contentMain > .content_letter > .letterHead {
+  font-size: 1.08rem;
+  font-weight: 550;
 }
-.Post > .content > .contentMain > .contentWhich > .contentWhichUl {
-  font-size: 14px;
-  line-height: 21px;
+.Post > .content > .contentMain > .content_letter > .letterContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--small-font-size);
+  letter-spacing: -0.005em;
+  line-height: 150%;
   font-weight: 300px;
+
+  letter-spacing: -0.005em;
 }

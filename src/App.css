@@ -15,6 +15,11 @@
   justify-content: space-between;
   height: 8%;
   align-items: center;
+  margin-top: 8px;
+}
+.App > .Header > .Logo > .LLogo {
+  width: 110px;
+  height: auto;
 }
 .App > .Header > .Bar {
   display: flex;
@@ -22,7 +27,10 @@
   align-items: flex-start;
   padding: 0px;
   gap: 49px;
-  color: #555555;
+}
+.App > .Header > .Bar :hover {
+  background-color: var(--background-color);
+  border-radius: 4px;
 }
 .App > .Nav {
   display: flex;
@@ -33,22 +41,32 @@
 
   height: 9%;
 }
+.App > .Nav > .Nav_write {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
 .writing {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-weight:550;
+  margin-left: 7px;
+  font-weight: 550;
   font-size: var(--big-font-size);
   color: #333333;
 }
-.App>.Main{
+.App > .Main {
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
 }
-
+.App > .Main > .Main_write {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
 .App > .Main > .Posts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -57,4 +75,3 @@ gap: 16px;
   width: 100%;
   height: 100%;
 }
-

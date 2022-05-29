@@ -3,6 +3,7 @@ import './App.css';
 import './root.css';
 import './Tag.css';
 import './Post.css';
+import checkImg from './Img/check.svg';
 
 let num = 0;
 function Tag({ name, onChange }) {
@@ -13,6 +14,12 @@ function Tag({ name, onChange }) {
         onChange(event.target.innerHTML);
       }}
     >
+      <img
+        src={checkImg}
+        style={{
+          visibility: 'hidden',
+        }}
+      />
       {name}
     </button>
   );

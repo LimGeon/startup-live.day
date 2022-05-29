@@ -6,6 +6,7 @@
   --secondary-color: #bbb9b9;
   --blue-color: #be5afb;
   --background-color: #ebecf0;
+
   /*size*/
   --side-padding: 12px;
   --big-padding: 36px;
@@ -23,6 +24,10 @@
   margin: 0px;
   box-sizing: border-box;
   list-style: none;
+}
+a {
+  color: var(--black-color);
+  text-decoration: none;
 }
 body {
   overflow: visible;
