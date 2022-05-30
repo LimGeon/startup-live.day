@@ -14,7 +14,7 @@
   font-size: 14px;
   line-height: 100%;
   /* identical to box height, or 14px */
-  width: 81px;
+  padding: 0 10px;
   height: 38px;
 
   letter-spacing: -0.005em;

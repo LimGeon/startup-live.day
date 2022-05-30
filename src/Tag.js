@@ -12,15 +12,15 @@ function Tag({ name, onChange }) {
       className="Btn"
       onClick={(event) => {
         onChange(event.target.innerHTML);
-        {
+       /*  {
           const a = document.querySelector('.BtnCheckImg');
           a.style.display === 'none'
             ? (a.style.display = 'block')
             : (a.style.display = 'none');
-        }
+        } */
       }}
     >
-      <img className="BtnCheckImg" src={checkImg} style={{ display: 'none' }} />
+      {/* <img className="BtnCheckImg" src={checkImg} style={{ display: 'none' }} /> */}
       {name}
     </button>
   );
