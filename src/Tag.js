@@ -43,6 +43,7 @@ function Tags({ tagList, selectedTag, getTag }) {
     {
       tl.push(
         <Tag
+          key={num++} 
           name={tagList[i]}
           onChange={(_tag) => {
             selectedTag.includes(_tag)

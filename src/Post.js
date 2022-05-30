@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Post.css';
-
+let num = 99;
 function Post({
   userImg,
   userName,
@@ -26,7 +26,7 @@ function Post({
             <div className="userTime">{dataTime}</div>
           </div>
         </div>
-        <button className="insertWebina" onClick={(event) => {}}>
+        <button className="insertWebina Btn" onClick={(event) => {}}>
           웨비나 참여할래요
         </button>
       </div>
@@ -65,6 +65,7 @@ function Posts({ selectedTag, user }) {
       for (let j = 0; j < user[i].data.length; j++) {
         pl.push(
           <Post
+            key={num++}
             userImg={user[i].img}
             userName={user[i].name}
             dataTime={user[i].data[j].time}
@@ -80,18 +81,19 @@ function Posts({ selectedTag, user }) {
   } else {
     for (let i = 0; i < selectedTag.length; i++) {
       for (let j = 0; j < user.length; j++) {
-        for (let k = 0; k < user[i].data.length; k++) {
+        for (let k = 0; k < user[j].data.length; k++) {
           if (selectedTag[i] == user[j].data[k].tag) {
             pl.push(
               <Post
-                userImg={user[i].img}
-                userName={user[i].name}
-                dataTime={user[i].data[j].time}
-                dataImg={user[i].data[j].img}
-                dataTag={user[i].data[j].tag}
-                dataName={user[i].data[j].name}
-                dataWhich={user[i].data[j].which}
-                dataForWho={user[i].data[j].forWho}
+                key={num++}
+                userImg={user[j].img}
+                userName={user[j].name}
+                dataTime={user[j].data[k].time}
+                dataImg={user[j].data[k].img}
+                dataTag={user[j].data[k].tag}
+                dataName={user[j].data[k].name}
+                dataWhich={user[j].data[k].which}
+                dataForWho={user[j].data[k].forWho}
               />
             );
           }

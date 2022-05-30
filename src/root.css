@@ -48,6 +48,8 @@ body {
   text-transform: capitalize;
   /* Text/general */
   color: #13172f;
+
+  overflow-y: scroll;
 }
 .qwe {
   width: 100px;
