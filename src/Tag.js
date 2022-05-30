@@ -12,9 +12,15 @@ function Tag({ name, onChange }) {
       className="Btn"
       onClick={(event) => {
         onChange(event.target.innerHTML);
+        {
+          const a = document.querySelector('.BtnCheckImg');
+          a.style.display === 'none'
+            ? (a.style.display = 'block')
+            : (a.style.display = 'none');
+        }
       }}
     >
-      <img className="BtnCheckImg" src={checkImg} />
+      <img className="BtnCheckImg" src={checkImg} style={{ display: 'none' }} />
       {name}
     </button>
   );
@@ -24,7 +30,7 @@ function Tags({ tagList, selectedTag, getTag }) {
   tl.push(
     <Tag
       key={num++}
-      name={'all'}
+      name={'전체보기'}
       onChange={() => {
         getTag('');
       }}

@@ -133,7 +133,7 @@
 .Post > .content > .contentMain > .content_letter > .letterContent {
   font-size: var(--small-font-size);
   font-weight: 300;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.05em;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -141,7 +141,7 @@
   -webkit-line-clamp: 4; /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  line-height: 1.4em;
-  height: 5.6em;
+  line-height: 1.5em;
+  height: 6em;
   text-align: justify;
 }

@@ -17,7 +17,7 @@
   align-items: center;
   margin-top: 8px;
 }
-.App > .Header > .Logo > .LLogo {
+.LLogo {
   width: 110px;
   height: auto;
 }
@@ -70,6 +70,7 @@
 .App > .Main > .Posts {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
   align-items: center;
   justify-items: center;
   width: 100%;

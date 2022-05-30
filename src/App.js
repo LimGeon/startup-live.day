@@ -8,7 +8,6 @@ import Tags from './Tag.js';
 import Logo from './Img/logo.svg';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
-import checkImg from './Img/check.svg';
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
@@ -19,15 +18,28 @@ export default function App() {
   const [data, setData] = useState([
     {
       img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
-      tag: 'dog',
+      tag: '스타트업',
+      time: '4월 28일(목) 오후 7시',
+      name: '상시 학습이 일어나는 학습 조직 만들기',
+      which: [
+        '스타트업에서 만난 살아 숨쉬는 학습조직 - 박세헌 | 언픽셀 경영지원총괄 & 기업전략실',
+        '카훗과 함께 멋진 학습 조직 만들기 - 제임스 미클웨이트 | Kahoot! at work 부사장',
+        '상시 학습이 일어나는 조직을 만들 때 피해야 할 3가지 실수 - 이채린 | 클라썸 CEO',
+        '질의응답',
+      ],
+      forWho: [
+        '4대보험 신고를 해야 하는데 어떻게 시작해야 할지 모르겠는 HR 담당자/대포님',
+        '4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀',
+        '4대보험 신고부터 모든 HR업무를 나홀로 하느라 효율적인 방법을 찾고 있는 대표',
+      ],
     },
     {
       img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
-      tag: 'dog',
+      tag: '스타트업',
     },
     {
       img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
-      tag: 'cat',
+      tag: '기획',
     },
   ]);
   for (let i = 0; i < data.length; i++) {
@@ -39,35 +51,38 @@ export default function App() {
     {
       img: 'https://lh3.google.com/p/AF1QipOV8L3btjx1hDsMthdPlyh6B5OGaMEhDkqf11Qb=s124-c-U',
       name: 'CLASSUM',
-      time: '4월 28일(목) 오후 7시',
+      inf: {
+        img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
+        tag: '스타트업',
+        time: '4월 28일(목) 오후 7시',
+        name: '상시 학습이 일어나는 학습 조직 만들기',
+        which: [
+          '스타트업에서 만난 살아 숨쉬는 학습조직 - 박세헌 | 언픽셀 경영지원총괄 & 기업전략실',
+          '카훗과 함께 멋진 학습 조직 만들기 - 제임스 미클웨이트 | Kahoot! at work 부사장',
+          '상시 학습이 일어나는 조직을 만들 때 피해야 할 3가지 실수 - 이채린 | 클라썸 CEO',
+          '질의응답',
+        ],
+        forWho: [
+          '4대보험 신고를 해야 하는데 어떻게 시작해야 할지 모르겠는 HR 담당자/대포님',
+          '4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀',
+          '4대보험 신고부터 모든 HR업무를 나홀로 하느라 효율적인 방법을 찾고 있는 대표',
+        ],
+      },
     },
     {
       img: 'https://lh3.google.com/p/AF1QipPeBgHu1e5jNhd-trvC8OY7xKG4_6YdZ7LIafbf=s124-c-U',
       name: '장발',
     },
   ]);
-  const [content, setcontent] = useState([
-    {
-      name: '상시 학습이 일어나는 학습 조직 만들기',
-      which: [
-        '스타트업에서 만난 살아 숨쉬는 학습조직 - 박세헌 | 언픽셀 경영지원총괄 & 기업전략실',
-        '카훗과 함꼐 멋진 학습 조직 만들기 - 제임스 미클웨이트 | Kahoot! at work 부사장',
-        '상시 학습이 일어나는 조직을 만들 때 피해야 할 3가지 실수 - 이채린 | 클라썸 CEO',
-        '질의응답',
-      ],
-      forWho: [
-        '4대보험 신고를 해야 하는데 어떻게 시작해야 할지 모르겠는 HR 담당자/대포님',
-        '4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀',
-        '4대보험 신고부터 모든 HR업무를 나홀로 하느라 효율적인 방법을 찾고 있는 대표',
-      ],
-    },
-  ]);
+
   console.log(selectedTag);
   return (
     <div className="App">
       <header className="Header">
         <div className="Logo">
-          <img className="LLogo" src={Logo} alt="Logo" />
+          <a href="#">
+            <img className="LLogo" src={Logo} alt="Logo" />
+          </a>
         </div>
         <ul className="Bar">
           <li>
@@ -101,12 +116,7 @@ export default function App() {
             당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
           </div>
         </div>
-        <Posts
-          data={data}
-          selectedTag={selectedTag}
-          user={user}
-          content={content}
-        ></Posts>
+        <Posts data={data} selectedTag={selectedTag} user={user}></Posts>
       </main>
       <footer className="Footer">
         {/*         <Post data={data} selectedTag={selectedTag} user={user}></Post> */}

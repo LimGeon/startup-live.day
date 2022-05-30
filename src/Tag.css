@@ -23,6 +23,11 @@
   /* Grey / 3 */
   color: #555555;
   background: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .Btn:hover {
@@ -40,7 +45,6 @@
 /* .BtnCheckImg {
   display: none;
 } */
-/* .BtnCheckImg {
+.BtnCheckImg2 {
   display: block;
 }
- */
