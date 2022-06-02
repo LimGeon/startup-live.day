@@ -7,24 +7,29 @@ import checkImg from './Img/check.svg';
 
 let num = 0;
 function Tag({ name, onChange }) {
+  const [active, setActive] = useState(false);
+  const toggleActive = (event) => {
+    setActive((current) => !current);
+  };
+
+  useEffect(() => {
+    toggleActive;
+  }, []);
+
   return (
     <button
-      className="Btn"
+      className={active ? 'BtnClicked Btn' : 'Btn'}
       onClick={(event) => {
-        onChange(event.target.innerHTML);
-        /*  {
-          const a = document.querySelector('.BtnCheckImg');
-          a.style.display === 'none'
-            ? (a.style.display = 'block')
-            : (a.style.display = 'none');
-        } */
+        //onChange(event.target.innerText);
+        toggleActive();
+        console.log(name, active);
       }}
     >
-      {/* <img
-        className="BtnCheckImg"
-        src={checkImg} style={{ display: 'none' }} 
-      /> */}
-      {name}
+      <img
+        className={active ? 'CheckImgBlock' : 'CheckImgNone'}
+        src={checkImg}
+      />
+      <div className={active ? 'BtnText' : null}>{name}</div>
     </button>
   );
 }
@@ -43,7 +48,7 @@ function Tags({ tagList, selectedTag, getTag }) {
     {
       tl.push(
         <Tag
-          key={num++} 
+          key={num++}
           name={tagList[i]}
           onChange={(_tag) => {
             selectedTag.includes(_tag)

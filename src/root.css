@@ -13,6 +13,11 @@
   --big-fontsize: 24px;
 
   /* font-size */
+  /* 14px : 0.875
+     16px : 1 
+     18px : 1.125
+     24px : 2.5
+  */
   --small-font-size: 0.875rem;
   --main-font-size: 1rem;
   --big-font-size: 1.125rem;
@@ -30,6 +35,7 @@ a {
   text-decoration: none;
 }
 body {
+  /* height: 100vh; */
   overflow: visible;
   touch-action: auto;
 
@@ -37,11 +43,6 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
-  /* 14px : 0.875
-     16px : 1 
-     18px : 1.125
-     24px : 2.5
-  */
   line-height: 100%;
   /* identical to box height, or 16px */
   letter-spacing: -0.005em;
@@ -50,8 +51,5 @@ body {
   color: #13172f;
 
   overflow-y: scroll;
-}
-.qwe {
-  width: 100px;
-  height: 40px;
+  background-color: rgb(245, 245, 247);
 }

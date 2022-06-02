@@ -23,7 +23,7 @@ export default function App() {
       data: [
         {
           tag: '스타트업',
-          img: 'https://stackblitz.com/files/react-rn98a2/github/LimGeon/START_feedUP/main/image%205.png',
+          img: 'https://stackblitz.com/files/react-ozwjkw/github/LimGeon/START_feedUP/main/src/Img/image%205.png',
           time: '4월 28일(목) 오후 7시',
           name: '상시 학습이 일어나는 학습 조직 만들기',
           which: [
@@ -49,7 +49,7 @@ export default function App() {
           ],
           forWho: [
             '4대보험 신고를 해야 하는데 어떻게 시작해야 할지 모르겠는 HR 담당자/대표님',
-            ' 4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀 ',
+            '4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀 ',
             '4대보험 신고부터 모든 HR업무를 ‘나홀로’ 하느라 효율적인 방법을 찾고 있는 대표',
           ],
         },
@@ -99,7 +99,7 @@ export default function App() {
       }
     }
   }
-  console.log(selectedTag);
+ /*  console.log(selectedTag); */
   return (
     <div className="App">
       <header className="Header">

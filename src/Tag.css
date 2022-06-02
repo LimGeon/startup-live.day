@@ -13,12 +13,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 100%;
-  /* identical to box height, or 14px */
-  padding: 0 10px;
-  height: 38px;
-
-  letter-spacing: -0.005em;
-  text-transform: capitalize;
+  padding: 12px 16px;
 
   /* Grey / 3 */
   color: #555555;
@@ -29,6 +24,8 @@
   justify-content: space-evenly;
   align-items: center;
   cursor: pointer;
+
+  position: relative;
 }
 
 .Btn:hover {
@@ -38,14 +35,20 @@
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
-.Btn:focus-within {
-  /* Primary / 2 */
+
+.CheckImgNone {
+  display: none;
+}
+.CheckImgBlock {
+  display: block;
+  padding: 0px 16px;
+}
+.BtnClicked {
+  /* padding: 12px 16px 12px 47.44px; */
+  padding: 12px 0px;
   border: 1px solid #73a5da;
   border-radius: 16px;
 }
-/* .BtnCheckImg {
-  display: none;
-} */
-.BtnCheckImg2 {
-  display: block;
+.BtnText {
+  padding-right: 16px;
 }
