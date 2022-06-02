@@ -6,22 +6,12 @@ import './Post.css';
 import checkImg from './Img/check.svg';
 
 let num = 0;
-function Tag({ name, onChange }) {
-  const [active, setActive] = useState(false);
-  const toggleActive = (event) => {
-    setActive((current) => !current);
-  };
-
-  useEffect(() => {
-    toggleActive;
-  }, []);
-
+function Tag({ name, onChange, active }) {
   return (
     <button
       className={active ? 'BtnClicked Btn' : 'Btn'}
       onClick={(event) => {
-        //onChange(event.target.innerText);
-        toggleActive();
+        onChange(event.target.innerText);
         console.log(name, active);
       }}
     >
@@ -40,16 +30,19 @@ function Tags({ tagList, selectedTag, getTag }) {
       key={num++}
       name={'전체보기'}
       onChange={() => {
-        getTag('');
+        getTag(null);
       }}
     />
   );
   for (let i = 0; i < tagList.length; i++) {
     {
+      /*       console.log(tagList[i]);
+      console.log(selectedTag); */
       tl.push(
         <Tag
           key={num++}
           name={tagList[i]}
+          active={selectedTag.includes(tagList[i])}
           onChange={(_tag) => {
             selectedTag.includes(_tag)
               ? getTag(selectedTag.filter((tag) => tag !== _tag))
