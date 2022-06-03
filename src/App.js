@@ -18,7 +18,7 @@ export default function App() {
 
   const [user, setUser] = useState([
     {
-      img: 'https://lh3.google.com/p/AF1QipOV8L3btjx1hDsMthdPlyh6B5OGaMEhDkqf11Qb=s124-c-U',
+      img: 'https://thumb1.photo.mybox.naver.com/3472478127144223036?type=m1280_1280_2&nocache=2256162505',
       name: 'Ho & Gun',
       data: [
         {
