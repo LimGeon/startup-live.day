@@ -57,7 +57,7 @@ export default function App() {
       ],
     },
     {
-      img: 'https://lh3.google.com/p/AF1QipOV8L3btjx1hDsMthdPlyh6B5OGaMEhDkqf11Qb=s124-c-U',
+      img: 'https://stackblitz.com/files/react-rqsgls/github/LimGeon/START_feedUP/main/src/Img/image%206.png',
       name: 'flex',
       data: [
         {
@@ -154,9 +154,17 @@ export default function App() {
               찾아 웨비나를 열어드릴게요.
             </div>
           </div>
-          <div>
-            <input type="text" />
-            <button>스타트업 사람들에게 쏘아올리기</button>
+          <div className="footMain">
+            <input
+              type="text"
+              className="footMainText"
+              placeholder="ex) 어떻게하면 사용자 데이터 분석 잘하는 PM이 될 수 있을지 고민입니다. 경험을 공유받고 싶어요"
+            />
+            <div className="footBtn">
+              <button className="footBtn1" onClick={(event) => {}}>
+                <div className="footBtn2">스타트업 사람들에게 쏘아올리기</div>
+              </button>
+            </div>
           </div>
         </div>
       </footer>
