@@ -8,6 +8,7 @@ import Tags from './Tag.js';
 import Logo from './Img/logo.svg';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
+import catImg from './Img/cat.jpg';
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
@@ -18,11 +19,11 @@ export default function App() {
 
   const [user, setUser] = useState([
     {
-      img: 'https://thumb1.photo.mybox.naver.com/3472478127144223036?type=m1280_1280_2&nocache=2256162505',
+      img: 'https://stackblitz.com/files/react-rqsgls/github/LimGeon/START_feedUP/main/src/Img/3472478127144223036.jpg',
       name: 'Ho & Gun',
       data: [
         {
-          tag: '웹비나',
+          tag: '웨비나',
           img: 'https://stackblitz.com/files/react-ozwjkw/github/LimGeon/START_feedUP/main/src/Img/image%205.png',
           time: '4월 28일(목) 오후 7시',
           name: '상시 학습이 일어나는 학습 조직 만들기',

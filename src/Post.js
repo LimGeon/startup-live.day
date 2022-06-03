@@ -26,7 +26,7 @@ function Post({
             <div className="userTime">{dataTime}</div>
           </div>
         </div>
-        <button className="insertWebina Btn" onClick={(event) => {}}>
+        <button className="insertWebina" onClick={(event) => {}}>
           웨비나 참여할래요
         </button>
       </div>

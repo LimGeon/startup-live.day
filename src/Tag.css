@@ -28,7 +28,7 @@
   position: relative;
 }
 
-.Btn:hover {
+.NoClicked:hover {
   background: #ffffff;
   /* Grey / 2 */
   border: 1px solid #999999;
@@ -38,7 +38,7 @@
 
 .CheckImgNone {
   display: none;
-  pointer-events: none; 
+  pointer-events: none;
 }
 .CheckImgBlock {
   display: block;
@@ -50,6 +50,9 @@
   padding: 12px 0px;
   border: 1px solid #73a5da;
   border-radius: 16px;
+}
+.BtnClicked:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
 }
 .BtnText {
   padding-right: 16px;

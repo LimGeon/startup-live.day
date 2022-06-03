@@ -9,7 +9,7 @@ let num = 0;
 function Tag({ name, onChange, active }) {
   return (
     <button
-      className={active ? 'BtnClicked Btn' : 'Btn'}
+      className={active ? 'BtnClicked Btn' : 'Btn NoClicked'}
       onClick={(event) => {
         onChange(event.target.innerText);
       }}
