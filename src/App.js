@@ -143,7 +143,23 @@ export default function App() {
         </div>
         <Posts selectedTag={selectedTag} user={user}></Posts>
       </main>
-      <footer className="Footer"></footer>
+      <footer className="Footer">
+        <div className="footCard">
+          <div className="footHeader">
+            <div className="cardHead">
+              요즘 스타트업 일을 하면서 궁금하거나 고민되는 부분이 있나요?
+            </div>
+            <div className="cardText">
+              아래에 적어주시면 그 궁금증, 고민들을 해결해줄 수 있는 스타트업을
+              찾아 웨비나를 열어드릴게요.
+            </div>
+          </div>
+          <div>
+            <input type="text" />
+            <button>스타트업 사람들에게 쏘아올리기</button>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

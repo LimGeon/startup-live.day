@@ -35,8 +35,8 @@ a {
   text-decoration: none;
 }
 body {
-  /* height: 100vh; */
-  overflow: visible;
+  /*  height: 100%; */
+  overflow: auto;
   touch-action: auto;
 
   font-family: 'Pretendard Variable';
