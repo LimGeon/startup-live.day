@@ -19,10 +19,10 @@ export default function App() {
   const [user, setUser] = useState([
     {
       img: 'https://lh3.google.com/p/AF1QipOV8L3btjx1hDsMthdPlyh6B5OGaMEhDkqf11Qb=s124-c-U',
-      name: 'CLASSUM',
+      name: 'Ho & Gun',
       data: [
         {
-          tag: '스타트업',
+          tag: '웹비나',
           img: 'https://stackblitz.com/files/react-ozwjkw/github/LimGeon/START_feedUP/main/src/Img/image%205.png',
           time: '4월 28일(목) 오후 7시',
           name: '상시 학습이 일어나는 학습 조직 만들기',
