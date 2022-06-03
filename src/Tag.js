@@ -12,7 +12,6 @@ function Tag({ name, onChange, active }) {
       className={active ? 'BtnClicked Btn' : 'Btn'}
       onClick={(event) => {
         onChange(event.target.innerText);
-        console.log(name, active);
       }}
     >
       <img
@@ -25,24 +24,26 @@ function Tag({ name, onChange, active }) {
 }
 function Tags({ tagList, selectedTag, getTag }) {
   let tl = [];
+  let lengthOfselectedTag = selectedTag.length;
   tl.push(
     <Tag
       key={num++}
       name={'전체보기'}
+      active={lengthOfselectedTag == 0 ? true : false}
       onChange={() => {
-        getTag(null);
+        getTag('');
       }}
     />
   );
   for (let i = 0; i < tagList.length; i++) {
     {
-      /*       console.log(tagList[i]);
-      console.log(selectedTag); */
       tl.push(
         <Tag
           key={num++}
           name={tagList[i]}
-          active={selectedTag.includes(tagList[i])}
+          active={
+            lengthOfselectedTag == 0 ? false : selectedTag.includes(tagList[i])
+          }
           onChange={(_tag) => {
             selectedTag.includes(_tag)
               ? getTag(selectedTag.filter((tag) => tag !== _tag))

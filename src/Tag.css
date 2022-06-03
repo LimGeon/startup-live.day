@@ -38,10 +38,12 @@
 
 .CheckImgNone {
   display: none;
+  pointer-events: none; 
 }
 .CheckImgBlock {
   display: block;
   padding: 0px 16px;
+  pointer-events: none;
 }
 .BtnClicked {
   /* padding: 12px 16px 12px 47.44px; */

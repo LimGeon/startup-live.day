@@ -99,7 +99,7 @@ export default function App() {
       }
     }
   }
- /*  console.log(selectedTag); */
+  console.log(selectedTag);
   return (
     <div className="App">
       <header className="Header">
