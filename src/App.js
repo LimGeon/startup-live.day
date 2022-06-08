@@ -57,7 +57,7 @@ export default function App() {
       ],
     },
     {
-      img: 'https://stackblitz.com/files/react-rqsgls/github/LimGeon/START_feedUP/main/src/Img/image%206.png',
+      img: 'https://stackblitz.com/files/react-paf8v5/github/LimGeon/START_feedUP/main/src/Img/image%206.png',
       name: 'flex',
       data: [
         {
