@@ -1,10 +1,11 @@
-.App > .Nav > .Tags {
+.App > .Non-header > .Nav > .Tags {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
 }
+
 .Btn {
   border: 1px solid #e1e1e1;
   border-radius: 16px;

@@ -19,7 +19,7 @@ export default function App() {
 
   const [user, setUser] = useState([
     {
-      img: 'https://stackblitz.com/files/react-rqsgls/github/LimGeon/START_feedUP/main/src/Img/3472478127144223036.jpg',
+      img: 'https://stackblitz.com/files/react-paf8v5/github/LimGeon/START_feedUP/main/src/Img/image%206%20(1).png',
       name: 'Ho & Gun',
       data: [
         {
@@ -104,70 +104,76 @@ export default function App() {
   return (
     <div className="App">
       <header className="Header">
-        <div className="Logo">
-          <a href="#">
-            <img className="LLogo" src={Logo} alt="Logo" />
-          </a>
+        <div className="abcd">
+          <div className="Logo">
+            <a href="#">
+              <img className="LLogo" src={Logo} alt="Logo" />
+            </a>
+          </div>
+          <ul className="Bar">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Open Chat</a>
+            </li>
+            <li>
+              <a href="#">Content</a>
+            </li>
+            <li>
+              <a href="#">Bookings</a>
+            </li>
+          </ul>
         </div>
-        <ul className="Bar">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Open Chat</a>
-          </li>
-          <li>
-            <a href="#">Content</a>
-          </li>
-          <li>
-            <a href="#">Bookings</a>
-          </li>
-        </ul>
       </header>
-      <nav className="Nav">
-        <div className="Nav_write">
-          <img src={bookImg} alt="bookImg" />
-          <div className="writing">태그로 원하는 웨비나를 찾을 수 있어요.</div>
-        </div>
-        <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
-      </nav>
-      <main className="Main">
-        <div className="Main_write">
-          <img src={earthImg} alt="EarthImg" />
-          <div className="writing">
-            당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
-          </div>
-        </div>
-        <Posts selectedTag={selectedTag} user={user}></Posts>
-      </main>
-      <footer className="Footer">
-        <div className="footCard">
-          <div className="footHeader">
-            <div className="cardHead">
-              요즘 스타트업 일을 하면서 궁금하거나 고민되는 부분이 있나요?
-            </div>
-            <div className="cardText">
-              아래에 적어주시면 그 궁금증, 고민들을 해결해줄 수 있는 스타트업을
-              찾아 웨비나를 열어드릴게요.
+      <div className="Non-header">
+        <nav className="Nav">
+          <div className="Nav_write">
+            <img src={bookImg} alt="bookImg" />
+            <div className="writing">
+              태그로 원하는 웨비나를 찾을 수 있어요.
             </div>
           </div>
-          <div className="footMain">
-            <input
-              type="text"
-              className="footMainText"
-              placeholder="ex) 어떻게하면 사용자 데이터 분석 잘하는 PM이 될 수 있을지 고민입니다. 경험을 공유받고 싶어요"
-            />
-            <div className="footBtn">
-              <button className="footBtn1" onClick={(event) => {}}>
-                <div className="footBtn2">스타트업 사람들에게 쏘아올리기</div>
-              </button>
+          <Tags tagList={tagList} selectedTag={selectedTag} getTag={getTag} />
+        </nav>
+        <main className="Main">
+          <div className="Main_write">
+            <img src={earthImg} alt="EarthImg" />
+            <div className="writing">
+              당신의 커리어리를 향상시켜줄 웨비나 리스트에요.
             </div>
           </div>
-        </div>
-      </footer>
+          <Posts selectedTag={selectedTag} user={user}></Posts>
+        </main>
+        <footer className="Footer">
+          <div className="footCard">
+            <div className="footHeader">
+              <div className="cardHead">
+                요즘 스타트업 일을 하면서 궁금하거나 고민되는 부분이 있나요?
+              </div>
+              <div className="cardText">
+                아래에 적어주시면 그 궁금증, 고민들을 해결해줄 수 있는
+                스타트업을 찾아 웨비나를 열어드릴게요.
+              </div>
+            </div>
+            <div className="footMain">
+              <input
+                type="text"
+                className="footMainText"
+                placeholder="ex) 어떻게하면 사용자 데이터 분석 잘하는 PM이 될 수 있을지 고민입니다. 경험을 공유받고 싶어요"
+              />
+              <div className="footBtn">
+                <button className="footBtn1" onClick={(event) => {}}>
+                  <div className="footBtn2">스타트업 사람들에게 쏘아올리기</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

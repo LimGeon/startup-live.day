@@ -5,7 +5,8 @@
   padding: 0px;
   gap: 16px;
 
-  width: 528px;
+  /* width: 528px; */
+ /*  width: clamp(300px, 100%, 528px); */
   height: 663px;
 
   background: #ffffff;
@@ -98,7 +99,7 @@
   line-height: 100%;
   color: #555555;
 }
-.Post .postHead .insertWebina:hover{
+.Post .postHead .insertWebina:hover {
   padding: 12px 0px;
   border: 1px solid #73a5da;
   border-radius: 16px;

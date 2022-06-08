@@ -6,42 +6,55 @@
   padding: 0px;
   gap: 40px;
   height: 100vh;
-  max-width: 1080px;
   margin: auto;
 }
 .App > .Header {
+  display: block;
+  box-shadow: rgb(234 234 236) 0px 1px 0px;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--white-color);
+}
+.App > .Header > .abcd {
+  margin: auto;
+  max-width: 1080px;
   display: flex;
-  flex-flow: row, nowrap;
-  justify-content: space-between;
-  height: 8%;
   align-items: center;
-  margin-top: 8px;
+  justify-content: space-between;
+  position: relative;
+  min-height: 3rem;
 }
 .LLogo {
   width: 110px;
   height: auto;
 }
-.App > .Header > .Bar {
+.App > .Header > .abcd > .Bar {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
   gap: 49px;
 }
-.App > .Header > .Bar :hover {
+.App > .Header > .abcd > .Bar :hover {
   background-color: var(--background-color);
   border-radius: 4px;
 }
-.App > .Nav {
+.App > .Non-header {
+  margin: auto;
+  max-width: 1080px;
+}
+.App > .Non-header > .Nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 16px;
-
-  height: 9%;
+  height: 100px;
+  flex-wrap: nowrap;
 }
-.App > .Nav > .Nav_write {
+.App > .Non-header > .Nav > .Nav_write {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -55,19 +68,19 @@
   font-size: var(--big-font-size);
   color: #333333;
 }
-.App > .Main {
+.App > .Non-header > .Main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 16px;
 }
-.App > .Main > .Main_write {
+.App > .Non-header > .Main > .Main_write {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
-.App > .Main > .Posts {
+.App > .Non-header > .Main > .Posts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
@@ -76,7 +89,12 @@
   width: 100%;
   height: 100%;
 }
-.App > .Footer {
+@media (max-width: 1150px) {
+  .App > .Non-header > .Main > .Posts {
+    grid-template-columns: 1fr;
+  }
+}
+.App > .Non-header > .Footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +105,7 @@
   width: 1080px;
   height: 262px;
 }
-.App > .Footer > .footCard {
+.App > .Non-header > .Footer > .footCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,31 +122,31 @@
   border: 1px solid #e1e1e1;
   border-radius: 20px;
 }
-.App > .Footer > .footCard > .footHeader {
+.App > .Non-header > .Footer > .footCard > .footHeader {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 10px;
 }
-.App > .Footer > .footCard > .footHeader > .cardHead {
+.App > .Non-header > .Footer > .footCard > .footHeader > .cardHead {
   font-size: 24px;
   font-weight: 600;
 }
-.App > .Footer > .footCard > .footHeader > .cardText {
+.App > .Non-header > .Footer > .footCard > .footHeader > .cardText {
   font-weight: 300;
   font-size: var(--small-font-size);
   line-height: 150%;
   color: #555555;
 }
-.App > .Footer > .footCard > .footMain {
+.App > .Non-header > .Footer > .footCard > .footMain {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 4px;
 }
-.App > .Footer > .footCard > .footMain > .footMainText {
+.App > .Non-header > .Footer > .footCard > .footMain > .footMainText {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -143,10 +161,10 @@
   border-right: none;
   border-color: #c1c1c1;
 }
-.App > .Footer > .footCard > .footMain > .footMainText:focus {
+.App > .Non-header > .Footer > .footCard > .footMain > .footMainText:focus {
   outline: none;
 }
-.App > .Footer > .footCard > .footMain > .footBtn {
+.App > .Non-header > .Footer > .footCard > .footMain > .footBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,7 +174,7 @@
   width: 736px;
   height: 48px;
 }
-.App > .Footer > .footCard > .footMain > .footBtn > .footBtn1 {
+.App > .Non-header > .Footer > .footCard > .footMain > .footBtn > .footBtn1 {
   display: flex;
   flex-flow: row, nowrap;
   justify-content: center;
@@ -170,13 +188,26 @@
   border: 1px solid #e1e1e1;
   border-radius: 16px;
 }
-.App > .Footer > .footCard > .footMain > .footBtn > .footBtn1 > .footBtn2 {
+.App
+  > .Non-header
+  > .Footer
+  > .footCard
+  > .footMain
+  > .footBtn
+  > .footBtn1
+  > .footBtn2 {
   font-weight: 600;
   font-size: var(--small-font-size);
   line-height: 100%;
   color: #555555;
 }
-.App > .Footer > .footCard > .footMain > .footBtn > .footBtn1:hover {
+.App
+  > .Non-header
+  > .Footer
+  > .footCard
+  > .footMain
+  > .footBtn
+  > .footBtn1:hover {
   /* Grey / 2 */
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
