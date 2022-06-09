@@ -6,8 +6,7 @@
   gap: 16px;
 
   /* width: 528px; */
- /*  width: clamp(300px, 100%, 528px); */
-  height: 663px;
+  width: clamp(300px, 100%, 528px);
 
   background: #ffffff;
   /* Grey/1 */

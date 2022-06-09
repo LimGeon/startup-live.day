@@ -104,7 +104,7 @@ export default function App() {
   return (
     <div className="App">
       <header className="Header">
-        <div className="abcd">
+        <div className="HeaderContent">
           <div className="Logo">
             <a href="#">
               <img className="LLogo" src={Logo} alt="Logo" />
@@ -127,6 +127,25 @@ export default function App() {
               <a href="#">Bookings</a>
             </li>
           </ul>
+          <div class="row cf">
+            <div class="three col">
+              <div
+                class="hamburger"
+                id="hamburger-5"
+                onClick={(event) => {
+                  $(document).ready(function () {
+                    $('.hamburger').click(function () {
+                      $(this).toggleClass('is-active');
+                    });
+                  });
+                }}
+              >
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <div className="Non-header">

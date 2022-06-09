@@ -50,5 +50,6 @@ body {
   color: #13172f;
 
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: rgb(245, 245, 247);
 }
