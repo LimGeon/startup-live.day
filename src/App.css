@@ -73,7 +73,7 @@
 }
 @media (max-width: 850px) {
   .cf{
-    display:block;
+    display:block !important;
   }
   .Bar{
     display:none !important;
