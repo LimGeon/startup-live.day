@@ -3,9 +3,10 @@ import './root.css';
 import './App.css';
 import './Tag.css';
 import './Post.css';
+import './Header.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
-import Logo from './Img/logo.svg';
+import Header from './Header.js';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
 import catImg from './Img/cat.jpg';
@@ -100,53 +101,12 @@ export default function App() {
       }
     }
   }
+
   console.log(selectedTag);
   return (
     <div className="App">
       <header className="Header">
-        <div className="HeaderContent">
-          <div className="Logo">
-            <a href="#">
-              <img className="LLogo" src={Logo} alt="Logo" />
-            </a>
-          </div>
-          <ul className="Bar">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Open Chat</a>
-            </li>
-            <li>
-              <a href="#">Content</a>
-            </li>
-            <li>
-              <a href="#">Bookings</a>
-            </li>
-          </ul>
-          <div class="row cf">
-            <div class="three col">
-              <div
-                class="hamburger"
-                id="hamburger-5"
-                onClick={(event) => {
-                  $(document).ready(function () {
-                    $('.hamburger').click(function () {
-                      $(this).toggleClass('is-active');
-                    });
-                  });
-                }}
-              >
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Header />
       </header>
       <div className="Non-header">
         <nav className="Nav">
