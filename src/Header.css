@@ -11,13 +11,14 @@
   width: 110px;
   height: auto;
 }
- .HeaderContent > .Bar {
+.HeaderContent > .Bar {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
   gap: 49px;
-} .HeaderContent > .Bar :hover {
+}
+.HeaderContent > .Bar :hover {
   background-color: var(--background-color);
   border-radius: 4px;
 }
@@ -44,11 +45,10 @@
 }
 
 .cf {
-  *zoom: 1;
+  display: none;
 }
 
 .row .three {
-  padding: 15px 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -60,7 +60,7 @@
 .hamburger .line {
   width: 35px;
   height: 3px;
-  background-color: #ecf0f1;
+  background-color: var(--black-color);
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;

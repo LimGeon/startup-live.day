@@ -7,6 +7,7 @@ import './Header.css';
 import Posts from './Post.js';
 import Tags from './Tag.js';
 import Header from './Header.js';
+import User from './User.js';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
 import catImg from './Img/cat.jpg';

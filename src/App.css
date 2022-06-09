@@ -71,6 +71,14 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 850px) {
+  .cf{
+    display:block;
+  }
+  .Bar{
+    display:none !important;
+  }
+}
 .App > .Non-header > .Footer {
   display: flex;
   flex-direction: column;
