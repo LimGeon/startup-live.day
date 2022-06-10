@@ -21,7 +21,7 @@
 }
 .Bar :hover {
   background-color: var(--background-color);
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 /* hamburger */

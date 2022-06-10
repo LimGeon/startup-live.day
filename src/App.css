@@ -223,6 +223,7 @@
     padding: 0.25rem !important;
     flex-direction: column !important;
     align-items: center !important;
+    gap: 0px !important;
     -webkit-box-pack: center;
     justify-content: center;
     position: absolute;
@@ -232,7 +233,6 @@
     background-color: var(--white-color);
     box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px;
     border-radius: 1rem;
-    gap: 0px !important;
   }
   .Bar-noActive {
     display: none !important;
@@ -240,6 +240,7 @@
 
   .Bar li {
     display: flex;
+    width: 100%;
   }
   .Bar a {
     height: auto;
