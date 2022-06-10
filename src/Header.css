@@ -6,6 +6,7 @@
   justify-content: space-between;
   position: relative;
   min-height: 3rem;
+  padding: 0px 1rem;
 }
 .LLogo {
   width: 110px;
@@ -55,18 +56,22 @@
 
   color: #4c6268;
   text-align: center;
-  margin-right: 10px;
+  padding: 10px;
 }
-
+.three:hover {
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
 .hamburger .line {
-  width: 35px;
-  height: 3px;
-  background-color: var(--black-color);
+  width: 18px;
+  height: 2.3px;
+  background-color: var(--secondary-color);
   display: block;
-  margin: 8px auto;
+  margin: 2px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  /* 19 1.6 3 */
 }
 
 .hamburger:hover {
@@ -97,24 +102,25 @@
 
 #hamburger-5.is-active .line:nth-child(1),
 #hamburger-5.is-active .line:nth-child(3) {
-  width: 35px;
+  width: 15px;
   -webkit-transform-origin: right;
   -moz-transform-origin: right;
   -ms-transform-origin: right;
   -o-transform-origin: right;
   transform-origin: right;
+  margin: 0;
 }
 
 #hamburger-5.is-active .line:nth-child(1) {
   -webkit-transform: translateY(15px) rotate(45deg);
   -ms-transform: translateY(15px) rotate(45deg);
   -o-transform: translateY(15px) rotate(45deg);
-  transform: translateY(15px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 
 #hamburger-5.is-active .line:nth-child(3) {
   -webkit-transform: translateY(-15px) rotate(-45deg);
   -ms-transform: translateY(-15px) rotate(-45deg);
   -o-transform: translateY(-15px) rotate(-45deg);
-  transform: translateY(-15px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
 }

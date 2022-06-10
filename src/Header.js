@@ -28,13 +28,15 @@ export default function Header() {
         </li>
       </ul>
       <div className="row cf">
-        <div className="three col">
+        <div
+          className="three col"
+          onClick={(event) => {
+            setActive((current) => !current);
+          }}
+        >
           <div
             className={activ ? 'hamburger is-active' : 'hamburger'}
             id="hamburger-5"
-            onClick={(event) => {
-              setActive((current) => !current);
-            }}
           >
             <span className="line"></span>
             <span className="line"></span>
