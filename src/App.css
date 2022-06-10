@@ -189,7 +189,22 @@
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
-
+/* .Bar {
+  display: none !important;
+  display: flex !important;
+  padding: 0.25rem !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+  height: auto;
+  top: 54px;
+  right: 1rem;
+  background-color: var(--white-color);
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px;
+  border-radius: 1rem;
+} */
 @media (max-width: 1150px) {
   .App > .Non-header > .Main > .Posts {
     grid-template-columns: 1fr;
@@ -204,7 +219,33 @@
     display: block !important;
   }
   .Bar {
+    display: flex !important;
+    padding: 0.25rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    height: auto;
+    top: 54px;
+    right: 1rem;
+    background-color: var(--white-color);
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px;
+    border-radius: 1rem;
+    gap: 0px !important;
+  }
+  .Bar-noActive {
     display: none !important;
+  }
+
+  .Bar li {
+    display: flex;
+  }
+  .Bar a {
+    height: auto;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0.375rem 0.5rem;
   }
   .HeaderContent {
     padding: 0px 0, 7rem;

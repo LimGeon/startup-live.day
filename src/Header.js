@@ -10,23 +10,25 @@ export default function Header() {
           <img className="LLogo" src={Logo} alt="Logo" />
         </a>
       </div>
-      <ul className="Bar">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Open Chat</a>
-        </li>
-        <li>
-          <a href="#">Content</a>
-        </li>
-        <li>
-          <a href="#">Bookings</a>
-        </li>
-      </ul>
+      <div className={activ ? null : 'Bar-noActive'}>
+        <ul className="Bar">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Open Chat</a>
+          </li>
+          <li>
+            <a href="#">Content</a>
+          </li>
+          <li>
+            <a href="#">Bookings</a>
+          </li>
+        </ul>
+      </div>
       <div className="row cf">
         <div
           className="three col"

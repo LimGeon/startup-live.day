@@ -12,14 +12,14 @@
   width: 110px;
   height: auto;
 }
-.HeaderContent > .Bar {
+.HeaderContent .Bar {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
   gap: 49px;
 }
-.HeaderContent > .Bar :hover {
+.Bar :hover {
   background-color: var(--background-color);
   border-radius: 4px;
 }
