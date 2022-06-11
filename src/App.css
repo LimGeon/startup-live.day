@@ -75,7 +75,7 @@
   padding-bottom: 20px;
   gap: 10px;
 
-  width: 1080px;
+  max-width: 1080px;
   height: 262px;
 }
 .App > .Non-header > .Footer > .footCard {
@@ -189,22 +189,7 @@
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
-/* .Bar {
-  display: none !important;
-  display: flex !important;
-  padding: 0.25rem !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  -webkit-box-pack: center;
-  justify-content: center;
-  position: absolute;
-  height: auto;
-  top: 54px;
-  right: 1rem;
-  background-color: var(--white-color);
-  box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px;
-  border-radius: 1rem;
-} */
+
 @media (max-width: 1150px) {
   .App > .Non-header > .Main > .Posts {
     grid-template-columns: 1fr;
@@ -254,9 +239,33 @@
   .contentName {
     font-size: clamp(1.4rem, 3vw, 1.5rem) !important;
   }
+  .footCard {
+    width: 100% !important;
+  }
+  .cardHead {
+    font-size: clamp(1.4rem, 3vw, 1.5rem) !important;
+    line-height: 100%;
+  }
+  .footBtn {
+    width: 100% !important;
+  }
+  .footMainText {
+    width: 100% !important;
+  }
+  .footMain {
+    width: -webkit-fill-available;
+  }
 }
 @media (max-width: 830px) {
   .PostPic {
     display: none;
+  }
+}
+@media (max-width: 730px) {
+  .App > .Non-header > .Footer > .footCard > .footHeader > .cardText {
+    display: none;
+  }
+  .footMainText::placeholder {
+    color: transparent;
   }
 }

@@ -10,7 +10,6 @@ import Header from './Header.js';
 import User from './User.js';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
-import catImg from './Img/cat.jpg';
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
