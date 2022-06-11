@@ -17,13 +17,15 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  gap: 49px;
+  gap: 29px;
 }
 .Bar :hover {
   background-color: var(--background-color);
   border-radius: 5px;
 }
-
+.Bar a {
+  padding: 8px;
+}
 /* hamburger */
 .col {
   display: block;
