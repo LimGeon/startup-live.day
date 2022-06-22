@@ -24,9 +24,9 @@ export default function App() {
       name: 'Ho & Gun',
       data: [
         {
-          tag: '웨비나',
+          tag: '사이트 설명',
           img: 'https://stackblitz.com/files/react-ozwjkw/github/LimGeon/START_feedUP/main/src/Img/image%205.png',
-          time: '4월 28일(목) 오후 7시',
+          time: '7월 16일 오후 7시',
           name: '상시 학습이 일어나는 학습 조직 만들기',
           which: [
             '스타트업에서 만난 살아 숨쉬는 학습조직 - 박세헌 | 언픽셀 경영지원총괄 & 기업전략실',
