@@ -10,7 +10,7 @@ import Header from './Header.js';
 import User from './User.js';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
-import Logo from './Img/logo.svg'
+import Logo from './Img/logo.svg';
 //import myPost from './Img/me.jpg';
 
 export default function App() {
