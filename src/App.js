@@ -10,6 +10,8 @@ import Header from './Header.js';
 import User from './User.js';
 import bookImg from './Img/bookImg.svg';
 import earthImg from './Img/Earth.svg';
+import Logo from './Img/logo.svg'
+//import myPost from './Img/me.jpg';
 
 export default function App() {
   const [tagList, setTagList] = useState([]);
@@ -20,24 +22,24 @@ export default function App() {
 
   const [user, setUser] = useState([
     {
-      img: 'https://stackblitz.com/files/react-paf8v5/github/LimGeon/START_feedUP/main/src/Img/image%206%20(1).png',
+      //img: ,
       name: 'Ho & Gun',
       data: [
         {
-          tag: '사이트 설명',
+          tag: '웨비나',
           img: 'https://stackblitz.com/files/react-ozwjkw/github/LimGeon/START_feedUP/main/src/Img/image%205.png',
           time: '7월 16일 오후 7시',
-          name: '상시 학습이 일어나는 학습 조직 만들기',
+          name: '사이트 이용방법에 대한 강의',
           which: [
-            '스타트업에서 만난 살아 숨쉬는 학습조직 - 박세헌 | 언픽셀 경영지원총괄 & 기업전략실',
-            '카훗과 함께 멋진 학습 조직 만들기 - 제임스 미클웨이트 | Kahoot! at work 부사장',
-            '상시 학습이 일어나는 조직을 만들 때 피해야 할 3가지 실수 - 이채린 | 클라썸 CEO',
+            '사이트 이용하는법',
+            '등록, 신청 하는법',
+            '앞으로의 계획',
             '질의응답',
           ],
           forWho: [
-            '4대보험 신고를 해야 하는데 어떻게 시작해야 할지 모르겠는 HR 담당자/대포님',
-            '4대보험을 담당하고 있지만 케이스별로 디테일을 챙기기 어려운 인사팀',
-            '4대보험 신고부터 모든 HR업무를 나홀로 하느라 효율적인 방법을 찾고 있는 대표',
+            '웨비나를 보고싶은데 어디서 누가 하는지 알 수 없었던 분',
+            '웨비나를 하고 싶은데 홍보가 안돼서 고민이셨던 분',
+            '웨비나를 신청했는데 언제 하는지 까먹을까 걱정이신 분',
           ],
         },
         {
